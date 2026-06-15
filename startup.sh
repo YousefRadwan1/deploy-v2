@@ -11,7 +11,7 @@ pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu --
 pip install -r requirements.txt --quiet
 
 # Start the app with gunicorn
-gunicorn app:app \
+gunicorn app.main:app \
   --worker-class uvicorn.workers.UvicornWorker \
   --workers 1 \
   --bind 0.0.0.0:8000 \

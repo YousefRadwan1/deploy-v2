@@ -1,0 +1,21 @@
+# ── Web framework ──────────────────────────────────────────────────────────────
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+gunicorn==22.0.0
+python-multipart==0.0.9
+requests>=2.31.0
+
+# ── Audio loading (pure Python — NO ffmpeg binary needed) ─────────────────────
+soundfile>=0.12.1        # WAV, FLAC, OGG, MP3, AIFF  (libsndfile bundled in wheel)
+av>=11.0.0               # OPUS, AAC, M4A, WEBM        (codecs bundled in wheel)
+scipy>=1.11.0            # High-quality resampling
+librosa>=0.10.2          # MFCC extraction + last-resort loader
+
+# ── Stage 2: Wav2Vec2 + ECAPA ─────────────────────────────────────────────────
+torch>=2.0.0
+torchaudio>=2.0.0
+transformers>=4.38.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+numpy>=1.24.0
+pydantic>=2.0.0
